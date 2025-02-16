@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djiek8uyh4a6x"
-path="res://.godot/imported/deep sea.png-2591eb41b7157a5b20301da8ad86ecd2.ctex"
+uid="uid://2i2t6bnkopj"
+path="res://.godot/imported/deep sea.jpg-4f70f3fc46df746362fa5641f98c40f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://deep sea.png"
-dest_files=["res://.godot/imported/deep sea.png-2591eb41b7157a5b20301da8ad86ecd2.ctex"]
+source_file="res://deep sea.jpg"
+dest_files=["res://.godot/imported/deep sea.jpg-4f70f3fc46df746362fa5641f98c40f1.ctex"]
 
 [params]
 

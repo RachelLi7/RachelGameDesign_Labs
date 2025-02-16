@@ -1,8 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://2un86hra6xwk"]
+[gd_scene load_steps=6 format=3 uid="uid://2un86hra6xwk"]
 
-[ext_resource type="Texture2D" uid="uid://djiek8uyh4a6x" path="res://deep sea.png" id="1_vv6qa"]
+[ext_resource type="Texture2D" uid="uid://2i2t6bnkopj" path="res://deep sea.jpg" id="1_0ankp"]
+[ext_resource type="PackedScene" uid="uid://drc3m7xy7yghh" path="res://seaweed.tscn" id="2_f5klp"]
+[ext_resource type="Texture2D" uid="uid://biqger2y7dc4g" path="res://fish.webp" id="3_auj2h"]
+[ext_resource type="Texture2D" uid="uid://bbsepooholfw0" path="res://shark.png" id="4_tiemx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k8hxy"]
+load_path = "res://.godot/imported/deep sea.png-2591eb41b7157a5b20301da8ad86ecd2.ctex"
 
 [node name="DeepSea" type="Sprite2D"]
 position = Vector2(576.343, 322.875)
 scale = Vector2(0.966196, 0.966196)
-texture = ExtResource("1_vv6qa")
+texture = SubResource("CompressedTexture2D_k8hxy")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(3.66437, 2.19931)
+scale = Vector2(0.69492, 0.69492)
+texture = ExtResource("1_0ankp")
+
+[node name="Seaweed" parent="." instance=ExtResource("2_f5klp")]
+modulate = Color(0.156863, 0.741176, 0.513726, 1)
+position = Vector2(-455.749, 190.567)
+scale = Vector2(1.275, 1.275)
+
+[node name="Seaweed2" parent="." instance=ExtResource("2_f5klp")]
+position = Vector2(-303.606, 240.246)
+scale = Vector2(0.84, 0.84)
+
+[node name="Seaweed3" parent="." instance=ExtResource("2_f5klp")]
+modulate = Color(0.454902, 0.803922, 0.52549, 1)
+position = Vector2(316.351, 220.581)
+
+[node name="Seaweed4" parent="." instance=ExtResource("2_f5klp")]
+position = Vector2(478.844, 198.847)
+scale = Vector2(1.205, 1.205)
+
+[node name="Fish" type="Sprite2D" parent="."]
+position = Vector2(-243.577, 97.4181)
+scale = Vector2(0.227589, 0.20306)
+texture = ExtResource("3_auj2h")
+
+[node name="Shark" type="Sprite2D" parent="."]
+position = Vector2(171.452, -39.2002)
+scale = Vector2(0.110455, 0.110455)
+texture = ExtResource("4_tiemx")
