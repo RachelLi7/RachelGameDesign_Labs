@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2un86hra6xwk"]
+
+[ext_resource type="Texture2D" uid="uid://djiek8uyh4a6x" path="res://deep sea.png" id="1_vv6qa"]
+
+[node name="DeepSea" type="Sprite2D"]
+position = Vector2(576.343, 322.875)
+scale = Vector2(0.966196, 0.966196)
+texture = ExtResource("1_vv6qa")

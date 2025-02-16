@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://drc3m7xy7yghh"]
+
+[ext_resource type="Texture2D" uid="uid://bxg1tgq4sm1k1" path="res://seaweed.png" id="1_2twfw"]
+
+[node name="Seaweed" type="Node2D"]
+
+[node name="Seaweed" type="Sprite2D" parent="."]
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("1_2twfw")
