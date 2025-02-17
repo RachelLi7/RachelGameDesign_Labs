@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bbsepooholfw0" path="res://shark.png" id="4_tiemx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k8hxy"]
-load_path = "res://.godot/imported/deep sea.png-2591eb41b7157a5b20301da8ad86ecd2.ctex"
 
 [node name="DeepSea" type="Sprite2D"]
 position = Vector2(576.343, 322.875)
