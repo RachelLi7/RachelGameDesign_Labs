@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60cu2pd7j8nt"]
+
+[ext_resource type="Texture2D" uid="uid://byclikfdwe8aa" path="res://grey cat.png" id="1_e300q"]
+[ext_resource type="Script" path="res://grey_cat.gd" id="2_7sise"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GreyCat" type="Sprite2D" parent="."]
+position = Vector2(586, 334)
+scale = Vector2(0.497126, 0.497126)
+texture = ExtResource("1_e300q")
+script = ExtResource("2_7sise")
