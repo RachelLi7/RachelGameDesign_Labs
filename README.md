@@ -1,4 +1,4 @@
-Lab Assignment Rachel Li
+Lab Assignment notes
 
 Lab 1 
 
