@@ -1,4 +1,4 @@
-Lab Assignment notes
+# Lab Assignment notes
 
 Lab 1 
 
