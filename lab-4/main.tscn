@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxqsg8v4mswnu"]
+[gd_scene load_steps=8 format=3 uid="uid://cxqsg8v4mswnu"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_rd3fv"]
 
@@ -13,13 +13,23 @@ sky_material = SubResource("ProceduralSkyMaterial_m6tp8")
 [sub_resource type="Environment" id="Environment_nvkhh"]
 background_mode = 2
 sky = SubResource("Sky_xvecq")
+ambient_light_color = Color(0.283688, 0.375912, 0.375202, 1)
+ambient_light_sky_contribution = 0.15
 tonemap_mode = 2
+fog_light_color = Color(0.522531, 0.58649, 0.270752, 1)
+fog_density = 0.0784
+fog_aerial_perspective = 0.026
+fog_sky_affect = 0.55
+fog_height = 3.1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gi887"]
 radius = 0.498114
 height = 1.98879
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yl4o6"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p2d01"]
+height = 12.3169
 
 [node name="Node3D" type="Node3D"]
 
@@ -45,9 +55,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.949247, 0)
 shape = SubResource("CapsuleShape3D_gi887")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(-0.0614071, -0.299495, 0.95212, -0.0309733, 0.954032, 0.298099, -0.997632, -0.0111849, -0.0678607, 4.30988, 2.92575, -0.0621011)
+transform = Transform3D(0.999451, 0.0330685, -0.0019863, -0.0309733, 0.954032, 0.298099, 0.0117527, -0.297874, 0.954533, -0.160858, 2.02368, 3.87785)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.942412, 0)
 mesh = SubResource("CapsuleMesh_yl4o6")
 skeleton = NodePath("../CollisionShape3D")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.00191984, 0.999998, 0, -0.999998, -0.00191984, 0, 0, 0, 1, 1.82256, 0.482679, -3.72488)
+radius = 0.461745
+height = 12.2331
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGCylinder3D"]
+transform = Transform3D(-0.00191984, -0.999998, 0, 0.999998, -0.00191984, 0, 0, 0, 1, 0.486177, -1.82163, 3.72488)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCylinder3D/StaticBody3D"]
+transform = Transform3D(-0.00191984, 0.999998, 0, -0.999998, -0.00191984, 0, 0, 0, 1, 1.82256, 0.482679, -3.72488)
+shape = SubResource("CylinderShape3D_p2d01")
